@@ -1,0 +1,129 @@
+<!-- Hero Section -->
+<section class="hero">
+    <section class="image">
+        <div class="opacity">
+            <div class="text">
+                <h3>Villa Lucia de Moche</h3>
+                <h1> <span>Un lugar para </span> <span id="typewriter" class="letras" style="color: brown;"></span> </h1>            </div>
+            <div class="buttons">
+                <button mat-raised-button matRippleColor="red" class="btn1">Contactanos</button>
+                <button mat-raised-button matRippleColor="#25D366" class="btn2">Descubre mas</button>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!-- About Section -->
+<section class="about">
+    <div class="about_text">
+        <h1 style="margin: 0; color: #C14D36;">Acerca de nosotros</h1>
+        <p style="color: #D9A441; width: 70%; text-align: center;">
+            Terrenos es una empresa dedicada a la venta de terrenos en la ciudad de Puebla, con mas de 10 años de experiencia en el mercado inmobiliario, ofrecemos los mejores terrenos a los mejores precios.
+        </p>
+    </div>
+    <div class="cards">
+        <mat-card class="card" appearance="outlined" style="width: 25%;">
+            <img mat-card-image src="https://img.resemmedia.com/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJwcm9wZXJ0aWVzLzJlZmIxOTE4LWQ3OTctNDUwYS1iMGZhLTNhZGYwOTQ4N2UxNC8zYmExN2M5ZC0zOTVhLTQxZDUtYjMyYy00OTVhMzU1NmY2NjguanBnIiwiYnJhbmQiOiJSRVNFTSIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODQwLCJoZWlnaHQiOjYzMCwiZml0IjoiY292ZXIifX19" alt="Terreno">
+        </mat-card>
+        <mat-card class="card" appearance="outlined" style="width: 30%;">
+            <img mat-card-image src="https://img.resemmedia.com/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJwcm9wZXJ0aWVzLzJlZmIxOTE4LWQ3OTctNDUwYS1iMGZhLTNhZGYwOTQ4N2UxNC8zYmExN2M5ZC0zOTVhLTQxZDUtYjMyYy00OTVhMzU1NmY2NjguanBnIiwiYnJhbmQiOiJSRVNFTSIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODQwLCJoZWlnaHQiOjYzMCwiZml0IjoiY292ZXIifX19" alt="Terreno">
+        </mat-card>
+        <mat-card class="card" appearance="outlined" style="width: 25%;">
+            <img mat-card-image src="https://img.resemmedia.com/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJwcm9wZXJ0aWVzLzJlZmIxOTE4LWQ3OTctNDUwYS1iMGZhLTNhZGYwOTQ4N2UxNC8zYmExN2M5ZC0zOTVhLTQxZDUtYjMyYy00OTVhMzU1NmY2NjguanBnIiwiYnJhbmQiOiJSRVNFTSIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODQwLCJoZWlnaHQiOjYzMCwiZml0IjoiY292ZXIifX19" alt="Terreno">
+        </mat-card>
+    </div>
+    <div class="buttons" style="margin-top: 2%;">
+        <button mat-raised-button matRippleColor="red" class="btn1">Descubre más</button>
+    </div>
+</section>
+<!-- Terrenos Section -->
+<section class="terrenos">
+    <div class="terrenos_text">
+        <h1 style="margin: 0; color: #C14D36;">Terrenos</h1>
+        <p style="color: #D9A441; width: 70%; text-align: center;">
+            Contamos con los mejores terrenos en la ciudad de Puebla, con una gran variedad de terrenos en diferentes zonas de la ciudad, encuentra el terreno de tus sueños con nosotros.
+        </p>
+    </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" *ngFor="let slide of slides">
+                <mat-card class="card" appearance="outlined" style="width: 100%;">
+                    <img mat-card-image [src]="slide.image">
+                </mat-card>
+            </div>
+        </div>
+    </div>
+    <div class="buttons" style="margin-top: 2%;">
+        <button mat-raised-button matRippleColor="red" class="btn1">Descubre más</button>
+    </div>
+</section>
+
+<!-- Contactanos Section -->
+<section class="contactanos">
+    <div class="left">
+        <div class="title">
+            <h1>¿Quieres saber más?</h1>
+            <h2>Contactanos ahora!</h2>
+        </div>
+        <form class="form">
+            <mat-form-field class="input" appearance="fill">
+                <input matInput placeholder="Nombre">
+            </mat-form-field>
+            <mat-form-field class="input" appearance="fill">
+                <input matInput placeholder="Correo">
+            </mat-form-field>
+            <mat-form-field class="input" appearance="fill">
+                <input matInput placeholder="Telefono">
+            </mat-form-field>
+            <mat-form-field class="input" appearance="fill">
+                <input matInput placeholder="Distrito (Opcional)">
+            </mat-form-field>
+            <button mat-raised-button class="btn1">Registrarse</button>
+        </form>
+    </div>
+    <div class="right">
+        <button mat-icon-button aria-label="Twitter" class="social-button">
+            <i class="fab fa-twitter"></i>
+        </button>
+        <button mat-icon-button aria-label="Instagram" class="social-button">
+            <i class="fab fa-instagram"></i>
+        </button>
+        <button mat-icon-button aria-label="Facebook" class="social-button">
+            <i class="fab fa-facebook-f"></i>
+        </button>
+        <button mat-icon-button aria-label="LinkedIn" class="social-button">
+            <i class="fab fa-linkedin-in"></i>
+        </button>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-logo">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/044/448/617/small/collection-of-simple-house-logo-designs-isolated-png.png" alt="Terrenos Logo" style="width: 15vw;">
+    </div>
+    <div class="footer-contact">
+        <h3>Contactanos</h3>
+        <p>Email: contactoterrenos.com</p>
+        <p>Teléfono: +52 123 456 7890</p>
+        <p>Dirección: Calle Falsa 123, Ciudad, País</p>
+    </div>
+    <div class="footer-social">
+        <h3>Síguenos</h3>
+        <button mat-icon-button aria-label="Twitter" class="social-button">
+            <i class="fab fa-twitter"></i>
+        </button>
+        <button mat-icon-button aria-label="Instagram" class="social-button">
+            <i class="fab fa-instagram"></i>
+        </button>
+        <button mat-icon-button aria-label="Facebook" class="social-button">
+            <i class="fab fa-facebook-f"></i>
+        </button>
+        <button mat-icon-button aria-label="LinkedIn" class="social-button">
+            <i class="fab fa-linkedin-in"></i>
+        </button>
+    </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>

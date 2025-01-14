@@ -1,0 +1,60 @@
+.toolbar{
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #C14D36;
+    height: 10%;
+    padding-bottom: 1.5vh;
+    
+}
+
+.toolbar_buttons{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.toolbar_buttons button{
+    margin: 0.4vw;
+    height: 100%;
+    width:fit-content;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 2.5vh;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 0%;
+    align-items: center;
+}
+
+
+
+.toolbar button:hover{
+    transition: 0.5s;
+    background-color: #E6C78F;
+    color: #C14D36;
+    transform: scale(1.1);
+}
+
+.toolbar_buttons .wasap{
+    align-items: center;
+    height: 80%;
+    border-radius: 0.5vw;
+    background: linear-gradient(180deg, #075E54 -80%, #25D366 50%, #075E54 180%); ;
+}
+
+.wasap h3{
+    color: white;
+    font-size: 2.5vh;
+    margin: 0;
+}
+
+.mat-ripple-element {
+    background-color: white; /* Adjust the color and opacity as needed */
+}
