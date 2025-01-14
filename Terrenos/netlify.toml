@@ -1,3 +1,7 @@
+[build]
+  publish = "dist/terrenos/browser"
+  command = "npm run build --prod"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
