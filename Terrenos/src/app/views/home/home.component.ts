@@ -44,6 +44,8 @@ export class HomeComponent implements OnInit {
 
   }
 
+  constructor(private router: Router) {}
+
   navigateTo(route: string): void {
     this.router.navigate([route]);
   }
