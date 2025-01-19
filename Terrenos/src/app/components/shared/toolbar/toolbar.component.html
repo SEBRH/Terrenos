@@ -1,15 +1,15 @@
-<mat-toolbar class="toolbar">
-    <div class="logo" style="height: 100%;">
-        <img src="assets/images/Logotipo.png" alt="Terrenos"
-            style="height: 10vh;" />
+<mat-toolbar [class.transparent]="isTransparent" [class.colored]="!isTransparent" class="toolbar">
+    <div class="logo" style=" background-color: #D9A441;">
+        <img src="assets/images/LogoOnly.png" alt="Terrenos"
+            style="height: 100%;" />
     </div>
 
-
     <div class="toolbar_buttons">
-        <button mat-button>Inicio</button>
-        <button mat-button>Acerca de nosotros</button>
-        <button mat-button>Terreno</button>
-        <button mat-button class="wasap" aria-label="Whatsapp" >
+        <button mat-button class="toolbar-button" [class.active]="isActive('home')" (click)="navigateTo('home')">Inicio</button>
+        <button mat-button class="toolbar-button" [class.active]="isActive('about')" (click)="navigateTo('about')">Acerca de nosotros</button>
+        <button mat-button class="toolbar-button" [class.active]="isActive('terrain')" (click)="navigateTo('terrain')">Terreno</button>
+       
+        <button mat-button class="wasap" aria-label="Whatsapp" (click)="openDialog()">
             <div style="display: flex; flex-direction: row; align-items: center; height: 100%;">
                 <h3>Contactanos</h3> 
                 <img src="assets/images/WASAAAA.png" alt="Whatsapp" style= "height: 5vh; filter:invert(100%);" />

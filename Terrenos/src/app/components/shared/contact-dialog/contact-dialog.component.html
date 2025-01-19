@@ -1,0 +1,38 @@
+<h2 mat-dialog-title>Registro</h2>
+<mat-dialog-content>
+  <p>Ingrese sus datos para registrarse</p>
+  <form #contactForm="ngForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input matInput placeholder="Nombre" name="nombre" ngModel required>
+      <mat-error *ngIf="contactForm.controls['nombre']?.invalid && contactForm.controls['nombre']?.touched">
+        Nombre es requerido
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Teléfono</mat-label>
+      <input matInput placeholder="Teléfono" type="number" name="telefono" ngModel required>
+      <mat-error *ngIf="contactForm.controls['telefono']?.invalid && contactForm.controls['telefono']?.touched">
+        Teléfono es requerido
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Correo</mat-label>
+      <input matInput placeholder="Correo" type="email" name="correo" ngModel required email>
+      <mat-error *ngIf="contactForm.controls['correo']?.invalid && contactForm.controls['correo']?.touched">
+        Correo válido es requerido
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Mensaje (Opcional)</mat-label>
+      <textarea matInput placeholder="Mensaje (Opcional)" name="mensaje" ngModel></textarea>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancelar</button>
+  <button mat-button [disabled]="contactForm.invalid" (click)="onSubmit(contactForm)">Registrate</button>
+</mat-dialog-actions>

@@ -10,6 +10,7 @@ import { MatRippleModule } from '@angular/material/core';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatSelectModule } from '@angular/material/select';
+import { FooterComponent } from '../../components/shared/footer/footer.component';
 
 @NgModule({
   imports: [
@@ -23,7 +24,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatProgressBarModule,
     MatChipsModule,
     MatSelectModule,
-    HomeComponent
+    HomeComponent, FooterComponent
   ],
   exports: [HomeComponent]
 })

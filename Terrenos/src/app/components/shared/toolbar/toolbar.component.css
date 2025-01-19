@@ -4,32 +4,63 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: #C14D36;
-    height: 10%;
-    padding-bottom: 1.5vh;
-    
+    position:fixed;
+    z-index: 1000;
+    transition: background-color 0.3s;
+    height: 12vh;
+
+}
+
+.toolbar.transparent {
+    background-color: transparent;
+}
+
+.toolbar.transparent button{
+    color: white;
+}
+
+.toolbar.colored {
+    background-color: #F3E9DC;
+}
+
+.toolbar.colored button{
+    color: #C14D36;
+}
+
+.toolbar .toolbar_buttons{
+    height: 100%;
+}
+
+.toolbar .toolbar_buttons .toolbar-button{
+    height: 100%;
+}
+
+.logo{
+    align-items: center;
+    height: 10vh;
+    border-radius: 100%;
+    margin: 1vh;
 }
 
 .toolbar_buttons{
-    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    gap: 1vw;
+        
 }
 
-.toolbar_buttons button{
-    margin: 0.4vw;
-    height: 100%;
-    width:fit-content;
+.toolbar_buttons .toolbar-button{
+    width: 14vw;
     background-color: transparent;
     color: white;
     border: none;
-    font-size: 2.5vh;
+    font-size:medium;
     cursor: pointer;
     transition: 0.5s;
-    border-radius: 0%;
+    border-radius: 2.5%;
     align-items: center;
 }
 
@@ -37,24 +68,30 @@
 
 .toolbar button:hover{
     transition: 0.5s;
-    background-color: #E6C78F;
+    font-size: larger;
     color: #C14D36;
-    transform: scale(1.1);
 }
 
 .toolbar_buttons .wasap{
     align-items: center;
-    height: 80%;
+    transition: 0.5s;
     border-radius: 0.5vw;
-    background: linear-gradient(180deg, #075E54 -80%, #25D366 50%, #075E54 180%); ;
+    background: linear-gradient(180deg, #c14d36af -80%, #fec04e 50%, #C14D36 180%); ;
 }
+
+.toolbar_buttons .wasap:hover{
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+
 
 .wasap h3{
     color: white;
     font-size: 2.5vh;
     margin: 0;
 }
-
-.mat-ripple-element {
-    background-color: white; /* Adjust the color and opacity as needed */
+.toolbar button.active {
+    border-bottom: 0.5vh solid #D9A441;
+    border-radius: 2.5% 2.5% 0 0;
 }

@@ -1,36 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 .mat-ripple-element {
     background-color: #f3e9dc99 !important;
 }
-
 
 .mat-form-field .mat-form-field-wrapper {
     padding: 0;
 }
 
 .mat-form-field .mat-form-field-flex {
-    background-color: #F3E9DC; /* Cambia el color de fondo del input */
-    border-radius: 5px; /* Añade bordes redondeados */
+    background-color: #F3E9DC;
+    /* Cambia el color de fondo del input */
+    border-radius: 5px;
+    /* Añade bordes redondeados */
 }
 
 .mat-form-field .mat-form-field-infix {
-    padding: 10px; /* Añade padding para mejorar la apariencia */
-    color: #333; /* Cambia el color del texto */
+    padding: 10px;
+    /* Añade padding para mejorar la apariencia */
+    color: #333;
+    /* Cambia el color del texto */
 }
 
 .mat-form-field.mat-focused .mat-form-field-flex {
-    background-color: #F3E9DC; /* Mantén el color de fondo al enfocar */
+    background-color: #F3E9DC;
+    /* Mantén el color de fondo al enfocar */
 }
 
 .mat-form-field .mat-form-field-underline {
-    display: none; /* Opcional: Elimina la línea inferior */
+    display: none;
+    /* Opcional: Elimina la línea inferior */
 }
 
 .mat-form-field .mat-form-field-ripple {
-    background-color: #C14D36; /* Cambia el color del ripple */
+    background-color: #C14D36;
+    /* Cambia el color del ripple */
 }
 

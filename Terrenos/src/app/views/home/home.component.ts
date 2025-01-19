@@ -9,14 +9,15 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { CommonModule } from '@angular/common';
-
+import { FooterComponent } from "../../components/shared/footer/footer.component";
+import { Router } from '@angular/router';
 
 
 
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, MatFormFieldModule, MatButtonModule, MatRippleModule,MatCardModule, MatChipsModule, MatProgressBarModule, MatSelectModule, MatInputModule],
+  imports: [CommonModule, MatFormFieldModule, MatButtonModule, MatRippleModule, MatCardModule, MatChipsModule, MatProgressBarModule, MatSelectModule, MatInputModule, FooterComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -42,6 +43,11 @@ export class HomeComponent implements OnInit {
     
 
   }
+
+  navigateTo(route: string): void {
+    this.router.navigate([route]);
+  }
+
   typewriterEffect() {
     const typewriter = document.getElementById('typewriter') as HTMLElement;
     if (!typewriter) return;
